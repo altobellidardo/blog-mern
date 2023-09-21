@@ -22,10 +22,12 @@ function Article () {
   }, [])
 
   return (
-    <div className='p-5 rounded-md border border-[#2d3c4e]'>
+    <div className="p-5 rounded-md border border-[#2d3c4e]">
       <ActionButtons title={article.title} loadArticles={loadArticle} page />
-      <h2 className='font-bold text-2xl'>{article.title}</h2>
-      <small>{new Date(article.createdAt).toLocaleDateString()}</small>
+      <h2 className="font-bold text-2xl">{article.title}</h2>
+      <small>
+        Created/Updated at: {new Date(article.updatedAt).toLocaleDateString()}
+      </small>
       <p>{article.description}</p>
     </div>
   )

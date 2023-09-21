@@ -22,10 +22,17 @@ export default function Home () {
           key={article.title}
           className="border mb-7 p-5 rounded-md border-[#2d3c4e]"
         >
-          <ActionButtons title={article.title} loadArticles={loadArticles} page={'Home'}/>
+          <ActionButtons
+            title={article.title}
+            loadArticles={loadArticles}
+            page={'Home'}
+          />
           <h2 className="font-bold text-2xl">{article.title}</h2>
-          <small>{new Date(article.createdAt).toLocaleDateString()}</small>
-          <p className='max-h-18 overflow-y-hidden'>{article.description}</p>
+          <small>
+            Created/Updated at:{' '}
+            {new Date(article.updatedAt).toLocaleDateString()}
+          </small>
+          <p className="max-h-18 overflow-y-hidden">{article.description}</p>
         </li>
       ))}
     </ul>
