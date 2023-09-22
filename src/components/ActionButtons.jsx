@@ -15,12 +15,12 @@ function ActionButtons ({ title, loadArticles, page }) {
   }
 
   return (
-    <div className='justify-end' >
+    <div className='mb-2'>
       {
         page === 'Home'
           ? (<Link
             href={`/article/${title}`}
-            className="mr-2 my-2 rounded-sm px-2 py-1 bg-cyan-600"
+            className="mr-2 mb-2 rounded-sm px-2 py-1 bg-cyan-600"
           >
             Read More
           </Link>)
@@ -28,13 +28,13 @@ function ActionButtons ({ title, loadArticles, page }) {
       }
       <Link
         href={`/edit/${title}`}
-        className="mr-2 my-2 rounded-sm px-2 py-1 bg-amber-500"
+        className="mr-2 mb-2 rounded-sm px-2 py-1 bg-amber-500"
       >
         Edit
       </Link>
       <button
         onClick={handleDelete}
-        className="my-2 rounded-sm px-2 py-1 bg-red-500"
+        className="rounded-sm px-2 py-1 bg-red-500"
       >
         Delete
       </button>

@@ -20,7 +20,7 @@ export default function Home () {
       {articles.map((article) => (
         <li
           key={article.title}
-          className="border mb-7 p-5 rounded-md border-[#2d3c4e]"
+          className="border mb-7 p-2 md:p-5 rounded-md border-[#2d3c4e]"
         >
           <ActionButtons
             title={article.title}
