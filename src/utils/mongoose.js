@@ -1,6 +1,6 @@
 import { connect, connection } from 'mongoose'
 
-const mongosrc = 'mongodb+srv://altobellidardo:altobellidardo@pruebacluster.zayt2yw.mongodb.net/blogApp'
+const mongosrc = process.env.MONGOSRC
 
 const conn = { isConnection: false }
 
@@ -8,7 +8,7 @@ export async function connectDB () {
   if (conn.isConnection) return
 
   const db = await connect(mongosrc)
-  console.log(db.connection.db.databaseName)
+  console.log('db name: ', db.connection.db.databaseName)
   conn.isConnection = db.connections[0].readyState
 }
 
